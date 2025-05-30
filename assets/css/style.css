@@ -1,0 +1,232 @@
+/* ======= Theme palette ======= */
+:root {
+  --primary: #D2691E;     /* Sienna - rust/brown color for industrial feel */
+  --secondary: #F2C078;   /* Light ochre - accent color */
+  --dark: #292929;        /* Dark charcoal - industrial dark */
+  --gray: #5B5B5B;        /* Medium gray for elements */
+  --light: #E0E0E0;       /* Light gray for text on dark backgrounds */
+  --warning: #F9A620;     /* Amber for warnings */
+  --danger: #E74C3C;      /* Red for alerts/danger */
+  --success: #27AE60;     /* Green for success states */
+}
+
+/* ======= Shared ======= */
+body {
+  min-height: 100vh;
+  background: var(--dark) url("../img/warehouse-concrete.jpg") center/cover fixed;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Roboto Condensed', system-ui, -apple-system, sans-serif;
+  color: var(--light);
+}
+
+/* Industrial card style */
+.card-glass {
+  background: rgba(41, 41, 41, .85);
+  border: 1px solid rgba(210, 105, 30, .3);
+  border-radius: 0;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, .3);
+  transition: all 0.2s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.card-glass::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: var(--primary);
+}
+
+.card-glass:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, .5);
+}
+
+a {
+  color: var(--secondary);
+}
+
+.btn-primary {
+  background: var(--primary);
+  border: none;
+  border-radius: 0;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.btn-primary:hover {
+  background: #B85C19;
+}
+
+.btn-outline-light {
+  border-radius: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+/* Industrial logo style */
+.logo-circle {
+  width: 2.2rem;
+  height: 2.2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-weight: 700;
+  font-size: 1.2rem;
+  position: relative;
+  background: none;
+}
+
+.logo-circle::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--primary);
+  transform: rotate(45deg);
+}
+
+/* Navigation styling */
+.navbar {
+  border-bottom: 3px solid var(--primary);
+  background: var(--dark) !important;
+}
+
+.navbar-brand {
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+/* Header styling */
+header {
+  background: linear-gradient(to right, var(--gray) 0%, var(--dark) 100%) !important;
+  border-bottom: 3px solid var(--primary);
+  padding: 2rem 0 !important;
+}
+
+header h1 {
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  position: relative;
+  display: inline-block;
+  padding-bottom: 10px;
+}
+
+header h1:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background: var(--primary);
+}
+
+/* Table styling */
+.table-custom {
+  background: rgba(41, 41, 41, .85);
+  color: var(--light);
+  border: none;
+}
+
+.table-custom th {
+  background: var(--gray);
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 1px;
+  border-bottom: 2px solid var(--primary);
+}
+
+.table-custom td, .table-custom th {
+  border-color: rgba(91, 91, 91, .3);
+}
+
+.table-custom tbody tr:hover {
+  background: rgba(210, 105, 30, .1);
+}
+
+/* Search box styling */
+.search-box {
+  background: rgba(41, 41, 41, .6);
+  border: 1px solid rgba(210, 105, 30, .3);
+  color: var(--light);
+  border-radius: 0;
+}
+
+.search-box:focus {
+  background: rgba(41, 41, 41, .8);
+  border-color: var(--primary);
+  color: var(--light);
+  box-shadow: 0 0 0 0.25rem rgba(210, 105, 30, 0.25);
+}
+
+/* Badge styling */
+.badge {
+  border-radius: 0;
+  font-weight: normal;
+  padding: 0.35em 0.65em;
+}
+
+.bg-success {
+  background-color: var(--success) !important;
+}
+
+.bg-danger {
+  background-color: var(--danger) !important;
+}
+
+.bg-warning {
+  background-color: var(--warning) !important;
+}
+
+/* Footer styling */
+footer {
+  border-top: 3px solid var(--primary);
+  background: var(--dark) !important;
+}
+
+/* Form styling */
+.form-control, .form-select {
+  border-radius: 0;
+}
+
+.modal-content {
+  border-radius: 0;
+  border-top: 3px solid var(--primary);
+}
+
+.btn-close-white {
+  filter: brightness(0) invert(1);
+}
+
+/* Industrial icons and indicators */
+.industrial-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.industrial-icon::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border: 2px solid var(--primary);
+  transform: rotate(45deg);
+}
+
+.industrial-icon i {
+  font-size: 24px;
+  color: var(--secondary);
+}
