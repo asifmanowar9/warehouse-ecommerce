@@ -216,7 +216,7 @@ try {
                                     <td><?= htmlspecialchars($user['email']) ?></td>
                                     <td>
                                         <div class="btn-group">
-                                            <button class="btn btn-sm btn-outline-light" data-bs-toggle="modal" data-bs-target="#editRoleModal" 
+                                            <button class="btn btn-sm btn-outline-dark" data-bs-toggle="modal" data-bs-target="#editRoleModal" 
                                                     data-user-id="<?= $user['id'] ?>" 
                                                     data-username="<?= htmlspecialchars($user['username']) ?>" 
                                                     data-role="<?= $user['role'] ?>">
